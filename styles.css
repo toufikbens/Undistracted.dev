@@ -162,7 +162,7 @@ button {
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   font-weight: 800;
   letter-spacing: 0;
 }
@@ -170,12 +170,9 @@ button {
 .logo-mark {
   width: 42px;
   height: 42px;
-  display: grid;
-  place-items: center;
-  border-radius: 10px;
-  color: #08090c;
-  background: linear-gradient(135deg, #ffffff 0%, var(--accent) 56%, var(--accent-2) 100%);
-  box-shadow: 0 0 34px rgba(245, 208, 138, 0.14);
+  flex: 0 0 42px;
+  display: block;
+  filter: drop-shadow(0 0 17px rgba(245, 208, 138, 0.18));
 }
 
 .logo-text {
