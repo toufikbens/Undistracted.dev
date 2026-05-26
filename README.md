@@ -1,1 +1,1 @@
-URL : https://toufikbens.github.io/Undistracted.dev/
+URL : undistracted.dev
