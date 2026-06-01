@@ -4,7 +4,7 @@ Undistracted.dev is a personal front-end portfolio and home for focused browser 
 
 ## Preview
 
-![Undistracted.dev homepage screenshot](Images/undistracted-dev-preview.jpg)
+![Undistracted.dev homepage screenshot](Images/undistracted-dev-preview.png)
 
 ## Built With
 
