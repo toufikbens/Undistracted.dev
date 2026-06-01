@@ -16,10 +16,3 @@ Undistracted.dev is a personal front-end portfolio and home for focused browser 
 
 [undistracted.dev](https://undistracted.dev/)
 
-## Local Preview
-
-Open `index.html` in a browser, or run a local server:
-
-```bash
-python3 -m http.server
-```
