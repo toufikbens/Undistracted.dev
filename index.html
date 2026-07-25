@@ -14,8 +14,6 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="site-bg" aria-hidden="true"></div>
-
   <header class="site-header">
     <div class="header-inner">
       <a href="#home" class="logo" aria-label="Undistracted.dev home">
@@ -42,29 +40,16 @@
 
   <main>
     <section id="home" class="hero section">
-      <div class="container hero-grid">
-        <div class="hero-content reveal">
-          <p class="eyebrow">Front-End Developer</p>
-          <h1>Front-end projects built with simple, clear code.</h1>
-          <p class="hero-description">
-            I'm Toufik, a front-end developer working with HTML, CSS, and JavaScript. This site is where I share my projects, improve my skills, and keep track of what I'm building.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#projects" class="btn primary-btn">View projects <i class="fa-solid fa-arrow-down"></i></a>
-            <a href="#contact" class="btn secondary-btn">Contact me <i class="fa-solid fa-paper-plane"></i></a>
-          </div>
+      <div class="container hero-content">
+        <p class="eyebrow">Front-End Developer</p>
+        <h1>Front-end projects built with simple, clear code.</h1>
+        <p class="hero-description">
+          I'm Toufik, a front-end developer working with HTML, CSS, and JavaScript. This site is where I share my projects, improve my skills, and keep track of what I'm building.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn primary-btn">View projects <i class="fa-solid fa-arrow-down"></i></a>
+          <a href="#contact" class="btn secondary-btn">Contact me <i class="fa-solid fa-paper-plane"></i></a>
         </div>
-
-        <aside class="hero-panel reveal" aria-label="Current focus">
-          <p class="panel-label">Current Focus</p>
-          <h2>I'm building this portfolio and adding better projects over time.</h2>
-          <div class="focus-list">
-            <span><i class="fa-solid fa-check"></i> Improving this website</span>
-            <span><i class="fa-solid fa-check"></i> Building small web projects</span>
-            <span><i class="fa-solid fa-check"></i> Planning an ambient sound app</span>
-          </div>
-        </aside>
       </div>
     </section>
 
@@ -160,30 +145,26 @@
         </div>
 
         <article class="tool-card reveal">
+          <figure class="tool-media">
+            <img src="Images/undistracted-timer.png" alt="Undistracted Timer browser app screenshot">
+          </figure>
           <div class="tool-content">
             <p class="project-tag">Focus Tool</p>
             <h3>Undistracted Timer</h3>
             <p>
               A quiet timer for focused work sessions and intentional breaks. Simple, fast, and distraction-free.
             </p>
-
             <div class="tool-meta" aria-label="Undistracted Timer highlights">
               <span><i class="fa-solid fa-bolt"></i> Fast</span>
               <span><i class="fa-brands fa-js"></i> JavaScript</span>
               <span><i class="fa-solid fa-display"></i> Browser-based</span>
             </div>
-
             <div class="tool-actions">
               <a href="https://timer.undistracted.dev/" target="_blank" rel="noopener noreferrer" class="btn primary-btn">
                 Open Tool <i class="fa-solid fa-arrow-up-right-from-square"></i>
               </a>
-
             </div>
           </div>
-
-          <figure class="tool-media">
-            <img src="Images/undistracted-timer.png" alt="Undistracted Timer browser app screenshot">
-          </figure>
         </article>
       </div>
     </section>
