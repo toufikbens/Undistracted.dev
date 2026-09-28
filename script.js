@@ -3,9 +3,21 @@ const navbar = document.querySelector(".navbar");
 const navLinks = document.querySelectorAll(".nav-links a");
 const header = document.querySelector(".site-header");
 const year = document.querySelector("#current-year");
+const clock = document.querySelector("#local-time");
 
 if (year) {
   year.textContent = new Date().getFullYear();
+}
+
+if (clock) {
+  const tick = () => {
+    clock.textContent = new Date().toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+  };
+  tick();
+  setInterval(tick, 30000);
 }
 
 function closeMenu() {
