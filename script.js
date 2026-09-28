@@ -20,6 +20,39 @@ if (clock) {
   setInterval(tick, 30000);
 }
 
+/* ── Theme toggle ────────────────────────────────── */
+
+const themeToggle = document.querySelector("#theme-toggle");
+
+function syncThemeButton() {
+  if (!themeToggle) return;
+  const dark = document.documentElement.getAttribute("data-theme") === "dark";
+  themeToggle.setAttribute("aria-pressed", String(dark));
+  themeToggle.setAttribute(
+    "aria-label",
+    dark ? "Switch to light theme" : "Switch to dark theme"
+  );
+}
+
+if (themeToggle) {
+  syncThemeButton();
+  themeToggle.addEventListener("click", () => {
+    const dark = document.documentElement.getAttribute("data-theme") === "dark";
+    if (dark) {
+      document.documentElement.removeAttribute("data-theme");
+      try {
+        localStorage.setItem("theme", "light");
+      } catch (e) {}
+    } else {
+      document.documentElement.setAttribute("data-theme", "dark");
+      try {
+        localStorage.setItem("theme", "dark");
+      } catch (e) {}
+    }
+    syncThemeButton();
+  });
+}
+
 function closeMenu() {
   navbar.classList.remove("active");
   burger.classList.remove("toggle");
