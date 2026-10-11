@@ -120,7 +120,19 @@ function updateNavigation() {
   });
 }
 
-window.addEventListener("scroll", updateNavigation, { passive: true });
+let navTick = false;
+window.addEventListener(
+  "scroll",
+  () => {
+    if (navTick) return;
+    navTick = true;
+    requestAnimationFrame(() => {
+      updateNavigation();
+      navTick = false;
+    });
+  },
+  { passive: true }
+);
 window.addEventListener("load", updateNavigation);
 window.addEventListener("resize", () => {
   if (window.innerWidth > 760) closeMenu();

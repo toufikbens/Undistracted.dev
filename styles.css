@@ -322,6 +322,7 @@ main,
 
 .hero-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 26px;
   flex: 0 0 auto;
 }
@@ -337,6 +338,19 @@ main,
 .hero-links a:hover {
   color: var(--accent);
   border-color: var(--accent);
+}
+
+.hero-now {
+  margin-top: 26px;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}
+
+.hero-now span {
+  color: var(--accent);
+  margin-right: 8px;
 }
 
 /* ── Section headers ────────────────────────────── */
@@ -366,26 +380,12 @@ main,
 
 /* ── About ──────────────────────────────────────── */
 
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: clamp(32px, 5vw, 72px);
-  align-items: start;
+.hero .sec-head {
+  margin-top: 88px;
 }
 
-.about-grid h2 {
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: clamp(1.9rem, 3.4vw, 2.6rem);
-  line-height: 1.08;
-  letter-spacing: -0.015em;
-  position: sticky;
-  top: 110px;
-}
-
-.about-grid h2 em {
-  font-style: italic;
-  color: var(--accent);
+.about-body {
+  max-width: 660px;
 }
 
 .about-body > p {
@@ -477,6 +477,20 @@ main,
   color: var(--muted);
   font-size: 0.9rem;
   max-width: 460px;
+}
+
+.work-note {
+  display: block;
+  margin-top: 10px;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}
+
+.work-note::before {
+  content: "+ ";
+  color: var(--accent);
 }
 
 .work-tag {
@@ -601,30 +615,11 @@ main,
   letter-spacing: 0.02em;
 }
 
-/* ── Stack ──────────────────────────────────────── */
-
-.stack-line {
-  font-family: var(--mono);
-  font-size: 0.92rem;
-  line-height: 2.1;
-  color: var(--ink);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  padding: 22px 0;
-}
-
-.stack-line span {
-  color: var(--muted);
-}
-
-.stack-note {
-  margin-top: 14px;
-  color: var(--muted);
-  font-size: 0.88rem;
-  max-width: 560px;
-}
-
 /* ── Contact ────────────────────────────────────── */
+
+.section-contact {
+  padding: 140px 0 120px;
+}
 
 .contact-title {
   font-family: var(--serif);
@@ -652,6 +647,7 @@ main,
   font-size: clamp(1.4rem, 3vw, 1.9rem);
   border-bottom: 2px solid var(--ink);
   padding-bottom: 2px;
+  overflow-wrap: anywhere;
   transition: var(--transition);
 }
 
@@ -703,6 +699,11 @@ button:focus-visible {
   outline-offset: 3px;
 }
 
+::selection {
+  background: var(--accent);
+  color: var(--paper);
+}
+
 /* ── Reveal (quiet) ─────────────────────────────── */
 
 .reveal {
@@ -725,13 +726,8 @@ button:focus-visible {
 /* ── Responsive ─────────────────────────────────── */
 
 @media (max-width: 900px) {
-  .about-grid,
   .tool-grid {
     grid-template-columns: 1fr;
-  }
-
-  .about-grid h2 {
-    position: static;
   }
 
   .hero-row {
@@ -748,7 +744,14 @@ button:focus-visible {
     justify-self: start;
   }
 
-  .work-thumb { display: none; }
+  .work-thumb {
+    grid-column: 1 / -1;
+    order: -1;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 8px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -809,6 +812,10 @@ button:focus-visible {
 
   .section {
     padding: 72px 0;
+  }
+
+  .section-contact {
+    padding: 100px 0 90px;
   }
 
   .principles > div {

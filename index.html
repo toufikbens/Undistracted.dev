@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Undistracted.dev — Toufik's front-end practice. Small, quiet websites and tools built with HTML, CSS and JavaScript." />
+  <meta name="description" content="Undistracted.dev — Toufik, front-end developer. Small websites and tools built by hand with HTML, CSS and JavaScript." />
   <title>Undistracted.dev — Toufik, front-end</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="Images/logo.svg">
+  <link rel="icon" type="image/svg+xml" href="/Images/logo.svg">
+  <link rel="icon" type="image/png" sizes="184x184" href="/Images/logo.png">
+  <link rel="apple-touch-icon" href="/Images/apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css" />
   <script>
     try {
@@ -30,7 +32,7 @@
 
       <nav class="navbar" aria-label="Main navigation">
         <ul class="nav-links">
-          <li><a href="#about"><span class="nav-num">01</span>About</a></li>
+          <li><a href="#home"><span class="nav-num">01</span>About</a></li>
           <li><a href="#projects"><span class="nav-num">02</span>Work</a></li>
           <li><a href="#tools"><span class="nav-num">03</span>Tools</a></li>
           <li><a href="#contact"><span class="nav-num">04</span>Contact</a></li>
@@ -55,57 +57,64 @@
       <div class="container">
         <p class="hero-top reveal">
           <span class="status-dot" aria-hidden="true"></span>
-          <span>Toufik — front-end, learning in public</span>
+          <span>Toufik — front-end developer</span>
           <span class="hero-time"><span id="local-time">--:--</span> local</span>
         </p>
-        <h1 class="hero-title reveal">Quiet websites<br><em>that don't shout.</em></h1>
+        <h1 class="hero-title reveal">Building for<br><em>the Web.</em></h1>
         <div class="hero-row reveal">
           <p class="hero-description">
-            I'm Toufik. This site is my practice log: small pages and tools
-            built with plain HTML, CSS and JavaScript. No frameworks, no noise —
-            just things that load fast and leave you alone.
+            Small pages and tools with plain HTML, CSS and
+            JavaScript — fast to load, easy to maintain.
           </p>
           <div class="hero-links">
             <a href="#projects">See the work ↓</a>
             <a href="#contact">Get in touch →</a>
           </div>
         </div>
-      </div>
-    </section>
+        <p class="hero-now reveal"><span aria-hidden="true">→</span> Currently rebuilding this portfolio.</p>
 
-    <section id="about" class="section">
-      <div class="container">
         <div class="sec-head reveal">
           <span class="sec-num">01</span>
           <span>About</span>
           <span class="sec-line" aria-hidden="true"></span>
         </div>
 
-        <div class="about-grid">
-          <h2 class="reveal">I work slowly,<br><em>on purpose.</em></h2>
+        <div class="about-body reveal">
+          <p>
+            I'm Toufik. I'm a mechanical engineer by education and a software
+            developer by choice, interested in understanding how things work
+            and building software that solves real problems.
+          </p>
+          <p>
+            My background in mechanical engineering taught me to approach problems
+            methodically. My experience in business operations gave me a practical
+            perspective on the tools and systems people rely on every day.
+          </p>
+          <p>
+            Today, I'm focused on software development, strengthening my
+            fundamentals, and building useful things for the web. I value
+            simplicity, thoughtful design, and code that's easy to understand
+            and maintain.
+          </p>
+          <p>
+            I believe in doing fewer things well, staying curious, and letting
+            the work speak for itself.
+          </p>
 
-          <div class="about-body reveal">
-            <p>
-              Most of the web fights for your attention. I'm interested in the
-              opposite: pages that do one thing, do it well, and get out of the way.
-            </p>
-            <p>
-              Right now that means <strong>rebuilding this portfolio</strong>, shipping
-              <strong>small practice builds</strong>, and growing one real product —
-              the <strong>Undistracted Timer</strong>.
-            </p>
-
-            <dl class="principles">
-              <div>
-                <dt>Less, finished</dt>
-                <dd>Three small shipped pages beat ten half-built ones. Everything here is live, not a mockup.</dd>
-              </div>
-              <div>
-                <dt>Plain first</dt>
-                <dd>HTML, CSS, JavaScript. I reach for a tool only when the boring stack can't do the job.</dd>
-              </div>
-            </dl>
-          </div>
+          <dl class="principles">
+            <div>
+              <dt>Less, finished</dt>
+              <dd>Small things, finished and live. Everything here works — no mockups.</dd>
+            </div>
+            <div>
+              <dt>Plain first</dt>
+              <dd>HTML, CSS, JavaScript. More only when the job needs it.</dd>
+            </div>
+            <div>
+              <dt>Plain tools</dt>
+              <dd>Git, GitHub, responsive layout. Nothing exotic, nothing that breaks.</dd>
+            </div>
+          </dl>
         </div>
       </div>
     </section>
@@ -124,7 +133,8 @@
               <span class="work-index">01</span>
               <span class="work-main">
                 <span class="work-title">Parallax Path of Focus <span class="arrow" aria-hidden="true">↗</span></span>
-                <span class="work-desc">A landing page about staying focused. Layered scroll, calm pacing, one idea per screen.</span>
+                <span class="work-desc">A landing page with layered scroll. One idea per screen.</span>
+                <span class="work-note">Parallax scroll · JS quote generator</span>
               </span>
               <span class="work-tag">Landing page</span>
               <img class="work-thumb" src="Images/image1.png" alt="Parallax Path of Focus screenshot" loading="lazy">
@@ -136,7 +146,8 @@
               <span class="work-index">02</span>
               <span class="work-main">
                 <span class="work-title">Tremont Restaurant <span class="arrow" aria-hidden="true">↗</span></span>
-                <span class="work-desc">A restaurant site exercise: menu sections, honest layout, readable on a phone in one hand.</span>
+                <span class="work-desc">A restaurant site: menu, hours, contact. Reads well on a phone.</span>
+                <span class="work-note">Sticky nav · gallery · story sections</span>
               </span>
               <span class="work-tag">Website</span>
               <img class="work-thumb" src="Images/image2.png" alt="Tremont Restaurant screenshot" loading="lazy">
@@ -148,7 +159,8 @@
               <span class="work-index">03</span>
               <span class="work-main">
                 <span class="work-title">Survey Form <span class="arrow" aria-hidden="true">↗</span></span>
-                <span class="work-desc">Form fundamentals: labels that make sense, grouped inputs, spacing that doesn't punish you.</span>
+                <span class="work-desc">A form exercise: clear labels, grouped inputs, generous spacing.</span>
+                <span class="work-note">JS validation · live progress bar</span>
               </span>
               <span class="work-tag">Practice</span>
               <img class="work-thumb" src="Images/image3.png" alt="Survey form screenshot" loading="lazy">
@@ -157,7 +169,7 @@
         </ol>
 
         <p class="work-next reveal">
-          <span><strong>Next —</strong> sound.undistracted.dev, an ambient mixer for focus sessions.</span>
+          <span><strong>Next —</strong> sound.undistracted.dev, an ambient mixer for focus.</span>
           <span>In progress</span>
         </p>
       </div>
@@ -174,54 +186,39 @@
         <div class="tool-grid">
           <div class="reveal">
             <p class="tool-kicker">Undistracted Timer</p>
-            <h2>A timer that <em>minds its own business.</em></h2>
+            <h2>A timer. <em>Nothing else.</em></h2>
             <p class="tool-body">
-              Work sessions and breaks, nothing else. No account, no streaks,
-              no confetti when you finish. It counts down quietly so you can think.
+              Work sessions and breaks. No account, no tracking —
+              it counts down while you work.
             </p>
-            <p class="tool-spec">Fast &nbsp;·&nbsp; JavaScript &nbsp;·&nbsp; Runs in the browser</p>
+            <p class="tool-spec">JavaScript &nbsp;·&nbsp; No backend</p>
             <a href="https://timer.undistracted.dev/" target="_blank" rel="noopener noreferrer" class="text-btn">
               Open timer ↗
             </a>
           </div>
           <figure class="tool-figure reveal delay-1">
             <img src="Images/undistracted-timer.png" alt="Undistracted Timer app" loading="lazy">
-            <figcaption>timer.undistracted.dev — a work session, undisturbed.</figcaption>
+            <figcaption>timer.undistracted.dev</figcaption>
           </figure>
         </div>
       </div>
     </section>
 
-    <section id="stack" class="section">
+    <section id="contact" class="section section-contact">
       <div class="container">
         <div class="sec-head reveal">
           <span class="sec-num">04</span>
-          <span>Stack</span>
-          <span class="sec-line" aria-hidden="true"></span>
-        </div>
-
-        <p class="stack-line reveal">HTML <span>·</span> CSS <span>·</span> JavaScript <span>·</span> Git <span>·</span> GitHub <span>·</span> Responsive layout</p>
-        <p class="stack-note reveal">Deliberately boring. Boring tools break less, load faster, and are easier to actually learn.</p>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container">
-        <div class="sec-head reveal">
-          <span class="sec-num">05</span>
           <span>Contact</span>
           <span class="sec-line" aria-hidden="true"></span>
         </div>
 
         <h2 class="contact-title reveal">Say hello<em>.</em></h2>
         <p class="contact-body reveal">
-          I take on small sites — landing pages, portfolios, simple builds.
-          If you like quiet work, we'll get along.
+          I build small sites: landing pages, portfolios, simple builds.
         </p>
         <a class="email-link reveal" href="mailto:hello@undistracted.dev">hello@undistracted.dev</a>
         <div class="contact-row reveal">
           <a href="https://github.com/toufikbens" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-          <a href="mailto:hello@undistracted.dev">Email →</a>
         </div>
       </div>
     </section>
@@ -230,10 +227,12 @@
   <footer class="footer">
     <div class="container footer-content">
       <p>© <span id="current-year"></span> undistracted.dev — Toufik</p>
+      <p>Set in Instrument Serif &amp; Inter · Hand-built, third rewrite since May 2026</p>
       <p>No trackers. No noise.</p>
     </div>
   </footer>
 
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
   <script src="script.js"></script>
 </body>
 </html>
