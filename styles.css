@@ -399,32 +399,6 @@ main,
   font-weight: 600;
 }
 
-.principles {
-  margin-top: 30px;
-  border-top: 1px solid var(--line);
-}
-
-.principles > div {
-  display: grid;
-  grid-template-columns: 150px 1fr;
-  gap: 16px;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--line-soft);
-}
-
-.principles dt {
-  font-family: var(--mono);
-  font-size: 0.78rem;
-  font-weight: 600;
-  padding-top: 2px;
-}
-
-.principles dd {
-  color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
 /* ── Work list ──────────────────────────────────── */
 
 .work-list {
@@ -816,11 +790,6 @@ button:focus-visible {
 
   .section-contact {
     padding: 100px 0 90px;
-  }
-
-  .principles > div {
-    grid-template-columns: 1fr;
-    gap: 4px;
   }
 
   .footer-content {
