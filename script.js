@@ -98,12 +98,14 @@ revealElements.forEach((element) => {
   revealObserver.observe(element);
 });
 
-const sections = document.querySelectorAll("section[id]");
+const sections = Array.from(document.querySelectorAll(".nav-links a"))
+  .map((link) => document.querySelector(link.getAttribute("href")))
+  .filter(Boolean);
 
 function updateNavigation() {
   header.classList.toggle("scrolled", window.scrollY > 40);
 
-  let activeSection = "home";
+  let activeSection = sections[0] ? sections[0].id : "home";
 
   sections.forEach((section) => {
     const sectionTop = section.offsetTop - 130;
