@@ -98,6 +98,29 @@ revealElements.forEach((element) => {
   revealObserver.observe(element);
 });
 
+/* ── Embers ──────────────────────────────────────── */
+
+const emberLayer = document.querySelector(".embers");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+if (emberLayer && !reduceMotion.matches) {
+  const count = window.innerWidth < 768 ? 9 : 18;
+  const random = (min, max) => min + Math.random() * (max - min);
+
+  for (let i = 0; i < count; i++) {
+    const ember = document.createElement("span");
+    ember.className = "ember";
+    ember.style.setProperty("--x", `${Math.random() * 100}%`);
+    ember.style.setProperty("--size", `${random(2, 4.5).toFixed(1)}px`);
+    ember.style.setProperty("--drift", `${random(-60, 60).toFixed(0)}px`);
+    ember.style.setProperty("--rise", `${random(38, 54).toFixed(0)}vh`);
+    ember.style.setProperty("--dur", `${random(7, 16).toFixed(1)}s`);
+    ember.style.setProperty("--delay", `${(-Math.random() * 16).toFixed(1)}s`);
+    ember.style.setProperty("--peak", random(0.35, 0.8).toFixed(2));
+    emberLayer.appendChild(ember);
+  }
+}
+
 const sections = Array.from(document.querySelectorAll(".nav-links a"))
   .map((link) => document.querySelector(link.getAttribute("href")))
   .filter(Boolean);

@@ -14,6 +14,10 @@
   --hover: rgba(27, 25, 20, 0.035);
   --thumb-filter: sepia(0.14) saturate(0.92);
   --shadow: 0 18px 40px rgba(27, 25, 20, 0.14);
+  --fire-1: rgba(210, 108, 48, 0.22);
+  --fire-2: rgba(226, 132, 60, 0.1);
+  --ember: #d9752f;
+  --ember-glow: rgba(217, 117, 47, 0.5);
   --radius: 3px;
   --transition: 180ms ease;
   --serif: "Instrument Serif", Georgia, serif;
@@ -37,6 +41,10 @@
   --hover: rgba(236, 231, 217, 0.05);
   --thumb-filter: sepia(0.14) saturate(0.85) brightness(0.94);
   --shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  --fire-1: rgba(255, 132, 36, 0.2);
+  --fire-2: rgba(255, 110, 20, 0.09);
+  --ember: #ffab5e;
+  --ember-glow: rgba(255, 140, 50, 0.6);
 }
 
 * {
@@ -75,6 +83,56 @@ body::before {
 
 body.menu-open {
   overflow: hidden;
+}
+
+/* ── Fire glow ──────────────────────────────────── */
+
+.fire {
+  position: fixed;
+  inset: auto 0 0 0;
+  height: 50vh;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(to top, var(--fire-1), var(--fire-2) 32%, transparent 74%),
+    radial-gradient(70% 110% at 50% 100%, var(--fire-2), transparent 68%);
+}
+
+.embers {
+  position: fixed;
+  inset: auto 0 0 0;
+  height: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ember {
+  position: absolute;
+  bottom: 0;
+  left: var(--x);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: var(--ember);
+  box-shadow: 0 0 6px 1px var(--ember-glow);
+  opacity: 0;
+  animation: ember-rise var(--dur) linear var(--delay) infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes ember-rise {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0;
+  }
+  12%,
+  62% {
+    opacity: var(--peak);
+  }
+  100% {
+    transform: translate3d(var(--drift), calc(-1 * var(--rise)), 0) scale(0.35);
+    opacity: 0;
+  }
 }
 
 img {
@@ -727,6 +785,10 @@ button:focus-visible {
   .container,
   .header-inner {
     width: min(100% - 24px, 1080px);
+  }
+
+  .fire {
+    height: 38vh;
   }
 
   .site-header {
